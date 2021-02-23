@@ -5,10 +5,8 @@ from os.path import join as pjoin
 sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 import logging
 
-import xmltodict
 from PIL import Image
 
-import cv2
 import numpy as np
 import torch
 import torch.nn.functional as F

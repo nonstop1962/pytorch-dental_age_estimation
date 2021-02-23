@@ -1,10 +1,6 @@
 import logging
-import math
-import numbers
 import random
-import types
 
-import cv2
 import numpy as np
 import torchvision.transforms.functional as tf
 from PIL import Image, ImageOps, ImageEnhance

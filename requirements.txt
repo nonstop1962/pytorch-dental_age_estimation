@@ -1,10 +1,6 @@
 pyyaml
 torch 
 torchvision
-xmltodict
 tqdm
-pretrainedmodels
 opencv-python
-scikit-learn
 tensorboard
-pycls==0.1.1
