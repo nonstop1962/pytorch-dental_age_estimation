@@ -1,0 +1,43 @@
+# dental directory dataset
+module:
+    mode: classification
+    network:
+        name: resnet152
+        n_classes: 3
+        pretrained: True
+    load_state:
+    loss:
+        name: 'cross_entropy_cls'
+    metric:
+        name: "runningScore_cls"
+    optimizer:
+        name:  'adam'
+        lr: 5.0e-5
+    scheduler:
+    data:
+        dataset_type: directory
+        code: /HDD0/shkim/research/thesis/Database_thesis/Medical/Dental_directory_dataset # directory of dataset root
+        label: 3classes # label folder name
+        mode: Classification
+        img_size: [112, 151] # width, height
+        n_classes: 3
+        training:
+            split: train1 # Training image set txt file name
+            augmentation:
+                rotate90_onlyimg: True
+                vflip_onlyimg: 0.5
+                hflip_onlyimg: 0.5
+            shuffle: True
+            batch_size: 32
+            n_workers: 8
+        validation:
+            split: val1 # Validation image set txt file name
+            batch_size: 1
+            n_workers: 4
+setting:
+    seed: 1337
+    train_iters: 30000
+    print_interval: 100
+    val_interval: 1000
+    save_interval: 1000
+    print_time: False
