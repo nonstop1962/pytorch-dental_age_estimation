@@ -184,14 +184,14 @@ Usage
 python main_gradCAM.py [--log_root_dir [LOG_ROOT_DIR]] [--config [CONFIG]] [--image-path IMAGE_PATH] [--label-path LABEL_PATH]
 
   --log_root_dir        directory for saving gradCAM results
-  --config              Configuration file path to use (same config file as training phase)
+  --config              Configuration file path to use (same config file as evaluation phase)
   --image-path          Input image path (e.g. 001.png)
   --label-path          Input label path (e.g. 001.txt)
 ```
 
 Sample command line:
 ```
-python main_gradCAM.py --log_root_dir /home/user/gradCAM_results --config config/resnet152_classification.yml --image-path /home/user/001.png --label-path /home/user/001.txt
+python main_gradCAM.py --log_root_dir /home/user/gradCAM_results --config config/resnet152_classification-evaluation.yml --image-path /home/user/001.png --label-path /home/user/001.txt
 ```
 
 Sample gradCAM result when running the above command line code (left: original image, right: gradCAM result): 
