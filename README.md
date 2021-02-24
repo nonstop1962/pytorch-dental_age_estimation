@@ -19,7 +19,24 @@ This is the official PyTorch implementation of our paper: [Age-group determinati
 ## Data preperation
 The dental dataset we used in the paper is confidential and cannot be disclosed publicly. Anyone who want to access the dataset, please send us an email.
 
-Email of the author (Seunghyeon Kim): ksh@robotics.snu.ac.kr 
+Email of the author (Seunghyeon Kim): ksh@robotics.snu.ac.kr
+
+Dataset folder should be constructed as follows:
+```
+Dental_dataset (dataset root folder)
+    └JPEGImages 
+        └image files (.jpg, .png, etc.)
+    └ClassificationClass 
+        └class folder name 1 (e.g. 3classes)
+            └class label files (.txt, same name as image files)
+        └class folder name 2 (e.g. 5classes)
+            └class label files (.txt, same name as image files)
+    └ImageSets
+        └task name (e.g. Classification)
+            └train.txt (file name list for training)
+            └val.txt (file name list for validation)
+            └eval.txt (file name list for evaluation)
+```
 <!-- 
 ## Usage
 
