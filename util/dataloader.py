@@ -63,7 +63,7 @@ def _stop(self):
 
 
 def _path_interpreter(code):
-
+    path = None
     if os.path.isdir(code) or os.path.isfile(code):
         # correct directory/file
         path = code
